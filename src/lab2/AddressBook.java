@@ -14,12 +14,14 @@ public class AddressBook
 	
 	public void removeBuddy(BuddyInfo bud) 
 	{
-		this.addyBook.remove(addyBook.indexOf(bud));
+		this.addyBook.remove(bud);
 	}
 	
 	public static void main(String args []) 
 	{
 		AddressBook ab = new AddressBook();
+		BuddyInfo budd = new BuddyInfo ("sama", "123", "cu");
 		ab.addBuddy("sama", "123", "cu");
+		ab.removeBuddy(budd);
 	}
 }
