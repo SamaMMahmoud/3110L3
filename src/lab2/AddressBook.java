@@ -4,7 +4,17 @@ import java.util.ArrayList;
 
 public class AddressBook 
 {
-	private ArrayList<BuddyInfo> addyBook = new ArrayList<BuddyInfo>();
+	//added a comment for commit
+	private ArrayList<BuddyInfo> addyBook;
+	
+	public AddressBook() {
+		addyBook = new ArrayList<BuddyInfo>();
+	}
+	
+	public void addBuddy(BuddyInfo bi) 
+	{
+		this.addyBook.add(bi);
+	}
 	
 	public void addBuddy(String name, String phonenum, String address) 
 	{
@@ -12,9 +22,18 @@ public class AddressBook
 		
 	}
 	
+	public void removeBuddy(int ind) 
+	{
+		this.addyBook.remove(ind);
+	}
+	
 	public void removeBuddy(BuddyInfo bud) 
 	{
 		this.addyBook.remove(bud);
+	}
+	
+	public int size() {
+		return addyBook.size();
 	}
 	
 	public static void main(String args []) 

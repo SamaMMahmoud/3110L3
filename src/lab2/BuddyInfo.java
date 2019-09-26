@@ -38,5 +38,22 @@ public class BuddyInfo {
 		//BuddyInfo bi = new BuddyInfo("Homer", "123","Carleton");
 		//System.out.println("Hello " + bi.getName());
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		//boilerplate of "Edge cases"
+		if (this == o) return true;
+		if (o == null) return false;
+		if (!(o instanceof BuddyInfo)) return false;
+		BuddyInfo bio = (BuddyInfo) o;
+		return (bio.address.contentEquals(this.address) && bio.name.equals(this.name) && bio.phonenum.equals(this.phonenum));
+	}
+	//add equals tests
+	//decoupling: 
+	//cohesion: 
+	
+	public void TestBuddyInfo() {
+		BuddyInfo bi = new BuddyInfo("Jo","123","123");
+	}
 
 }
